@@ -58,7 +58,7 @@ class PhpVariable extends PhpElement
             $ret .= PHP_EOL . $this->getSourceRow($this->comment->getSource());
         }
 
-        $ret .= $this->getSourceRow($this->access . ' $' . $this->identifier . $this->initialization . ';');
+        $ret .= $this->getSourceRow($this->access . ' $' . lcfirst($this->identifier) . $this->initialization . ';');
 
         return $ret;
     }
